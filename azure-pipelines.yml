@@ -28,4 +28,4 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
-        arguments: --build-arg EXPO_TOKEN
+        arguments: --build-arg $EXPO_TOKEN
