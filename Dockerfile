@@ -2,8 +2,6 @@ FROM node:16.15.0 as build
 
 ARG EXPO_TOKEN
 ENV EXPO_TOKEN $EXPO_TOKEN
-RUN echo "Expo token: " $EXPO_TOKEN
-
 
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
