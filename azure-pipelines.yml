@@ -10,7 +10,6 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-  EXPO_TOKEN: $(EXPO_TOKEN)
 
 stages:
 - stage: Build
@@ -28,4 +27,4 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
-        arguments: --build-arg $EXPO_TOKEN
+        arguments: --build-arg EXPO_TOKEN=$(EXPO_TOKEN)
